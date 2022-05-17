@@ -1,0 +1,165 @@
+API - Application Programming Interface
+
+API is nothing but the set of methods written in a class and bundled as a jar file.
+
+Whenever a user/org wants to use these methods, he'll have to call these APIs by using specific commands like GET, POST etc.
+
+Whoever wrote these methods might sell this API to different orgs and
+the common methods are called by different orgs, all these orgs will have their
+authentication key/token key to login to API and call these methods.
+
+These requests - Request JSON Payload
+response - Response JSON Payload
+
+WebServices -
+
+When Request Payload is sent to different site and received Response Payload, and no jar file is
+downloaded to local such service/API is called WwebServices.
+Over the network or HTTP it is happening.
+
+Important Factors -
+1. Authentication - Session/Token ID
+2. username/password
+3. Request - JSON?XML
+4. HTTP Method - CRUD
+
+
+Difference between SOAP and REST
+Simple Object Access Protocol	:	REpresentational State Transfer
+service interface to expose business logic	:	URI is used
+JAX-WS java API	:	JAX-RS java API
+XML only	:	JSON, XML, HTML, Plain Text etc.
+
+
+HTTP Methods = POST/GET/PUT/DELETE
+CRUD
+C - create - POST
+R - retrieve - GET
+U - update - PUT
+D - delete - DELETE
+
+HTTP Request contains
+1. URI
+2. Headers
+3. Payload(XML or JSON)
+
+HTTP Response contains
+1. Status - 200 OK
+2. Response Payload
+3. String message  - success
+
+Examples:
+
+POST call - used while creating new entity
+1. Create an Account -- POST call
+>> JSON/XML
+Account ID = 1
+Account name = "Tom"
+Address = "New York"
+Account Type = "Savings"
+
+GET call - used to get info
+2. Get an account by ID/Name
+>> URI
+>> Path parameter
+>> Query parameter
+>> Headers
+
+Note: URI = URL + Path parameter + Query Parameter
+
+PUT call - update or create
+3. Update an account
+Account id = 1
+Account name = Tom
+Address = New York
+Account Type = Current
+
+DELETE call - delete an entity
+4. Delete an account
+JSON
+Account id = 100
+Account name = "Tom"
+Address
+Account Type
+
+Status Response Code :
+Based on the request and response different codes are returned
+Ex: 200 = OK
+	201 = Created
+	400 = Bad Request
+	403 = Forbidden
+	404 = Not Found
+	500 = Internal Error
+	401 = Unauthorized/Authentication error
+
+Rest Client :
+A client is used to hit these APIs
+Ex: Browser, Postman, SOAP UI
+
+Swagger - API documentation tool
+
+Note: Path parameter is set using "/"
+	  Query parameter is set by using "?"
+
+JSON :
+JavaScript Object Notation, used for transferring data from one server to other server/client.
+The data can be in any Object format which will be converted to JSON format and transferred. This conversion is called marshalling. POJO to JSON - marshalling
+Similarly, JSON object will be converted to respective Object supported by server to fetch data. This conversion is called unmarshalling. JSON to POJO - unmarshalling
+
+
+
+
+/
+//		try {
+//			JSONArray array = (JSONArray) responseJson.get("data");
+//			Object text1= responseJson.get("data");
+//			System.out.println(text1.getClass().getSimpleName());
+//
+//			String text = "sdfghjkl";
+//			text.replace("[", "");text.replace("]", "");text.replace("{", "");text.replace("}", "");
+//			HashMap<String, String> eachData = new HashMap<String, String>();
+//			String[] temp = text.split(",");
+//			for (String value:temp) {
+//
+//					String a = value.split(":")[0];
+//					String b = value.split(":")[1];
+//					eachData.put(a, b);
+//			}
+//
+//			System.out.println("Value :" +eachData);
+//		}catch(Exception e) {
+//			System.out.println("Try Again!");
+//		}
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
